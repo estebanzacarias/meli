@@ -31,24 +31,28 @@ class Items extends Component {
     const { items } = this.state;
 
     return (
-      <div >
+      <div className="body">
       <Search handleSearch={this.handleSearch} />
-          <div className="contenido">
-          <div className="row justify-content-md-center">
+          <div className="container contenedor">
+          <div className="row justify-content-md-center pad">
         {items.map(hit =>
 
 
-             <Link to={`/items/${hit.id}`} className="col-12 d-flex caja">
+             <Link to={`/items/${hit.id}`} className="col-12 d-flex productos">
 
-               <div className="col col-lg-4 ">
+               <div className="col-2 image">
                <img src={hit.thumbnail}
                alt={hit.thumbnail}
                className="image-card"/>
 
                </div>
-               <div className="col col-lg-6 contend-card producto">
-               <h3>{hit.price}</h3>
-               <h3>{hit.title}</h3>
+               <div className="col-7">
+               <h3>${hit.price}</h3>
+               <h4>{hit.title}</h4>
+
+               </div>
+               <div className="col-3 site">
+                  <p>{hit.address.state_name}, {hit.address.city_name}</p>
                </div>
              </Link>
 

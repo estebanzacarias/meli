@@ -1,5 +1,5 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css");
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap');
 
 
 .navegacion{
@@ -56,4 +56,66 @@ position: fixed;
 .ph{
   width: 570px;
   background-color: #fff;
+}
+.productos{
+  text-decoration: none;
+
+  height: 220px;
+  align-items: center;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+}
+.productos:hover{
+  text-decoration: none;
+}
+.productos h4{
+  color: #333;
+  font-size: 20px;
+line-height: 1.2;
+font-weight: 300;
+list-style: none;
+font-family: 'Quicksand', sans-serif;
+padding-left: 30px;
+}
+.productos h3{
+  color: #333;
+  font-size: 24px;
+line-height: 1.2;
+font-weight: 300;
+list-style: none;
+padding-left: 30px;
+
+
+}
+.image{
+  float: right;
+}
+.image-card{
+  width: 160px;
+  height: 160px;
+}
+.contenedor{
+  padding-left: 10%;
+  padding-top: 85px;
+  z-index: 999999;
+}
+.body{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.row{
+  padding-right: 7%;
+}
+.pad{
+  padding-top: 30px;
+}
+.site{
+  font-size: 13px;
+  padding-bottom: 80px;
+  padding-left: 30px;
+  text-decoration: none;
+
+}
+.site p{
+  color:#333;
+  font-family: 'Quicksand', sans-serif;
 }

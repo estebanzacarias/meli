@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Search from './components/Search'
 import axios from 'axios';
 
 
@@ -37,6 +37,12 @@ class UserInfo extends React.Component {
         });
 
   }
+  handleSearch=(search)=>{
+    fetch('https://api.mercadolibre.com/sites/MLA/search?q=:'+search)
+      .then(res => res.json())
+      .then(data => this.setState({ items: data.results }));
+
+  }
 
 
 
@@ -46,7 +52,9 @@ class UserInfo extends React.Component {
 
 
     return (
+
       <div>
+      <Search handleSearch={this.handleSearch} />
       <h1>{item.title}</h1>
       <h3>${item.price}</h3>
       <img src={item.thumbnail}

@@ -23,9 +23,10 @@ class Search extends React.Component {
 
      <div className="nav">
         <div className="ico">
-     <img href="/" src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.6.1/mercadolibre/logo__large_plus.png"
+     <a href="/"><img  src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.6.1/mercadolibre/logo__large_plus.png"
 
      className="logo"/>
+     </a>
        </div>
      <div className="navegacion d-flex">
      <div className="ph">
