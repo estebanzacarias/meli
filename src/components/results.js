@@ -1,6 +1,6 @@
 import React from 'react';
 import Search from './Search'
-import { Link, Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 
 class Query extends React.Component {

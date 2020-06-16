@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './Search'
 import axios from 'axios';
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 class UserInfo extends React.Component {
   constructor(props) {
