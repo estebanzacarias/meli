@@ -1,5 +1,5 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
 
 
 .navegacion{
@@ -74,7 +74,7 @@ position: fixed;
 line-height: 1.2;
 font-weight: 300;
 list-style: none;
-font-family: 'Quicksand', sans-serif;
+font-family: 'Montserrat', sans-serif;
 padding-left: 30px;
 }
 .productos h3{
@@ -102,11 +102,10 @@ padding-left: 30px;
 .body{
   background-color: rgba(0, 0, 0, 0.2);
 }
-.row{
+
+
+.padd{
   padding-right: 7%;
-}
-.pad{
-  padding-top: 30px;
 }
 .site{
   font-size: 13px;
@@ -117,5 +116,78 @@ padding-left: 30px;
 }
 .site p{
   color:#333;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+.image-description{
+  width: 85%;
+}
+.description h1{
+  font-size: 22px;
+  padding-top: 50px;
+}
+.description h3{
+  font-size: 48px;
+  padding-top: 10px;
+}
+.btn{
+  width: 100%;
+}
+.row{
+  background-color: #fff;
+}
+.description-p p{
+font-size: 16px;
+padding-top: 15px;
+}
+.description-p h3{
+font-size: 28px;
+}
+.description-container{
+  padding-right: -10%!important;
+  padding-top: 80px;
+
+}
+.decimal{
+  font-size: 18px;
+  float: right;
+  padding-right: 135px;
+  position: relative;
+
+}
+.color{
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.ruta{
+  margin-top: 10px;
+  margin-bottom: 0!important;
+  padding-left: -10px;
+}
+.e-categoria{
+  font-size: 14px;
+
+
+}
+.ruteo{
+  padding-left: -10px;
+  margin-top: 7px;
+}
+.condiciones{
+
+  position: absolute;
+  padding-top: 20px;
+}
+.condiciones h6{
+  font-size: 16px;
+  font-weight: bolder;
+  font-family: 'Montserrat', sans-serif;
+}
+.item h3{
+   font-size: 29px;
+   font-weight: normal;
+   font-family: 'Montserrat', sans-serif;
+}
+.item h4{
+   font-size: 20px;
+   font-weight: lighter;
+   font-family: 'Montserrat', sans-serif;
 }

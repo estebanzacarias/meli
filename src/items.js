@@ -23,7 +23,9 @@ class Items extends Component {
 
   handleSearch=(search)=>{
     fetch('https://api.mercadolibre.com/sites/MLA/search?q=:'+search)
+
       .then(res => res.json())
+
       .then(data => this.setState({ items: data.results }));
 
   }
@@ -33,21 +35,25 @@ class Items extends Component {
     return (
       <div className="body">
       <Search handleSearch={this.handleSearch} />
-          <div className="container contenedor">
-          <div className="row justify-content-md-center pad">
+          <div className="container contenedor padd">
+          <div className="row justify-content-md-center pad ">
         {items.map(hit =>
 
 
-             <Link to={`/items/${hit.id}`} className="col-12 d-flex productos">
+             <Link
+               key={hit.id}
+                 to={`/items/${hit.id}`}
+                className="col-12 d-flex productos">
 
                <div className="col-2 image">
+
                <img src={hit.thumbnail}
                alt={hit.thumbnail}
                className="image-card"/>
 
                </div>
-               <div className="col-7">
-               <h3>${hit.price}</h3>
+               <div className="col-7 item">
+               <h3 type="number">$ {hit.price}</h3>
                <h4>{hit.title}</h4>
 
                </div>
