@@ -7,6 +7,7 @@ class Search extends React.Component {
     super(props)
     this.state = {search:''}
   }
+   /*Leo el contenido de la caja para guardarlo y enviarlo*/
   handleChange = (e) =>{
     this.setState({search: e.target.value})
   }
@@ -35,6 +36,7 @@ class Search extends React.Component {
               placeholder="Buscar productos, marcas y mas..."
               />
            </div>
+             
          <button
           className="boton"
           onClick={() => handleSearch(search)}>

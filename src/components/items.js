@@ -13,19 +13,22 @@ class Items extends Component {
 
     };
   }
-
+  /* Hago la consulta a la Api sin parametros */
   componentDidMount() {
     fetch(`https://api.mercadolibre.com/sites/MLA/search?q=:query`)
       .then(response => response.json())
       .then(data => this.setState({ items: data.results }));
   }
-
+  /* Cambio el estado de redirect a true cuando
+  se escribe algo en la caja de busqueda para que vaya a buscar los resultados*/
   handleSearch=(search)=>{
     this.setState({search:search})
     this.setState({redirect:true})
   }
 
   render() {
+      /* search contiene lo que se escribe en la caja, y es enviado
+      como parametro en caso de que se redireccione*/
    const { items, search, redirect } = this.state;
 
    if (redirect) {

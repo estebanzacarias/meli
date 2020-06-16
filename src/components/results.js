@@ -13,7 +13,8 @@ class Query extends React.Component {
       redirect: false,
       };
   }
-
+  /* Agarro como parametro la Query y la paso en la consulta
+  para poder filtrar las busquedas*/
   componentDidMount () {
     const { query } = this.props.match.params
      axios.get(`https://api.mercadolibre.com/sites/MLA/search?q=:${query}`)
@@ -21,7 +22,9 @@ class Query extends React.Component {
          this.setState({ item: item.results });
     });
   }
-
+    /*Utilizo la misma funcion de busqueda, nada mas que esta vez
+    le doy la condicion de que si hay una busqueda nueva
+    vuelva a ejecutar la consulta con los nuevos params*/
   handleSearch = ( search ) => {
     if ( search ) {
       axios.get(`https://api.mercadolibre.com/sites/MLA/search?q=:${search}`)

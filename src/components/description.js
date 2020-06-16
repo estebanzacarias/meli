@@ -14,7 +14,8 @@ class UserInfo extends React.Component {
           redirect: false,
         };
   }
-
+  /*Agarro el id por medio de los params y lo uso para filtrar
+  la info del producto que se busca obtener*/
   componentDidMount () {
   const { id } = this.props.match.params
     axios.get(`https://api.mercadolibre.com/items/${ id }`)
@@ -25,6 +26,8 @@ class UserInfo extends React.Component {
         .then(({ data: description }) => {
           this.setState({ description });
         });
+          /* Para obtener las categorias filtro el id, y lo uso como parametro
+          para buscar en la ruta /categories/:id*/
       axios.get('https://api.mercadolibre.com/items/'+id)
           .then(({ data: cat}) => {
             const idCategories= cat.category_id;
@@ -34,7 +37,7 @@ class UserInfo extends React.Component {
               });
         });
   }
-
+    /* Aca ultilizo la misma funcion de busqueda mas la condicion*/
   handleSearch=(search)=>{
     this.setState({search:search})
     this.setState({redirect:true})
@@ -58,6 +61,7 @@ const { item, description,redirect , search  } = this.state;
         </div>
         <div className="row col-12 d-flex ruta">
           <div className="col-8 image-d ">
+            
             <img className="image-description"
             src={item.thumbnail}
             alt={item.thumbnail}/>
