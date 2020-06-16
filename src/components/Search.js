@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FaSearch } from 'react-icons/fa';
 
-
 class Search extends React.Component {
   constructor(props){
     super(props)
@@ -11,46 +10,42 @@ class Search extends React.Component {
   handleChange = (e) =>{
     this.setState({search: e.target.value})
   }
+
   render(){
     const { handleSearch } =this.props
     const { search } = this.state
     return(
       <div className="search">
-
-
-     <nav>
-
-
-     <div className="nav">
-        <div className="ico">
-     <a href="/"><img
-       src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.6.1/mercadolibre/logo__large_plus.png"
-       alt="ico"
-
-     className="logo"/>
-     </a>
-       </div>
-     <div className="navegacion d-flex">
-     <div className="ph">
-         <input
-         value={search}
-         onChange={this.handleChange}
-         type="text"
-         className="input"
-         placeholder="Buscar productos, marcas y mas..."
-         />
-    </div>
+        <nav>
+          <div className="nav">
+            <div className="ico">
+              <a href="/"><img
+              src="https://http2.mlstatic.com/frontend-assets/ui-navigation/5.6.1/mercadolibre/logo__large_plus.png"
+              alt="ico"
+              className="logo"/>
+              </a>
+           </div>
+         <div className="navegacion d-flex">
+           <div className="ph">
+             <input
+              value={search}
+              onChange={this.handleChange}
+              type="text"
+              className="input"
+              placeholder="Buscar productos, marcas y mas..."
+              />
+           </div>
          <button
-
           className="boton"
-          onClick={() => handleSearch(search)}><div className="borde"><FaSearch className="i"/></div></button>
- </div>
-  </div>
-     </nav>
-
-
-
+          onClick={() => handleSearch(search)}>
+            <div className="borde">
+              <FaSearch className="i"/>
+            </div>
+          </button>
+        </div>
       </div>
+    </nav>
+  </div>
     )
   }
 }
